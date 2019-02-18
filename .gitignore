@@ -1,0 +1,23 @@
+# TEX
+*.pdf
+*.synctex.gz
+*.swp
+*.backup
+*.bak
+*.orig
+*.aux
+*.bcf
+*.glo
+*.ist
+*.lof
+*.log
+*.run.xml
+*.gz
+*.toc
+*.bbl
+*.blg
+*.out
+*.txss
+*.fls
+*.fdb_latexmk
+*-blx.bib
