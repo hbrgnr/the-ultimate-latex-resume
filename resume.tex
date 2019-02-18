@@ -1,0 +1,59 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article}
+
+\input{include/dependencies}
+\input{include/macros}
+\input{include/styling}
+\input{i18n/macros}
+
+%----------------------------------------------------------------------------------------
+%	SETTINGS
+%----------------------------------------------------------------------------------------
+
+\setlang{en}
+
+\toggletrue{picture} % set true for your picture to appear
+
+%----------------------------------------------------------------------------------------
+%	NAME ETC.
+%----------------------------------------------------------------------------------------
+
+\author{EXAMPLE AUTHOR}
+\date{\today}
+\addr{Line 1\par Line 2}
+\addrcity{City}
+\email{example@domain.org}
+\telephone{+12 345 67890}
+\birthday{Month, 1st, 1999}
+\birthplace{Exampletown}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	RESUME BODY
+%  --> reorder, remove etc.
+%----------------------------------------------------------------------------------------
+
+
+\input{content/personal}
+
+\input{content/education}
+
+\input{content/experiences}
+
+\input{content/projects}
+
+\input{content/patentpubs}
+
+\input{content/skills}
+
+\input{content/enghobbies}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

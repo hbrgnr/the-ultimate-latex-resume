@@ -1,0 +1,16 @@
+% !TeX root = ../resume.tex
+
+\newtoks\langenabled
+
+\langenabled{en}
+
+\newcommand{\setlang}[1]{
+	\makeatletter
+	\include{i18n/#1}
+	\langenabled{#1}
+	\makeatother
+}
+
+\newcommand{\iflang}[2]{
+	\ifthenelse{\equal{\the\langenabled}{#1}}{#2}{}
+}

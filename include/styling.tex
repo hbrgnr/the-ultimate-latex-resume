@@ -1,0 +1,53 @@
+% !TeX root = ../resume.tex
+
+% === STYLE SETTINGS ===
+
+\linespread{1.05}
+\setlength{\parindent}{0cm}
+
+\renewcommand{\tabcolsep}{1pt}
+\def\arraystretch{1.3}
+
+\makeatletter
+	\renewcommand{\@listI}{\itemsep=0pt}
+\makeatother
+
+\newlength{\imagewidth}
+\setlength{\imagewidth}{4.5cm}
+
+% === ENTRY COMMANDS ===
+
+% command to create the title
+\makeatletter
+	
+	\renewcommand{\maketitle}{
+		{\LARGE\textbf{\@author}}
+		\vspace*{2mm}
+	}
+
+\makeatother
+
+% command to create the section headlines
+\newcommand{\makeheadline}[1]{\section*{\expandafter\MakeUppercase\expandafter{#1}}}
+
+% environment for single and double col resume
+\newenvironment{resume-onecol}{\begin{tabular}{p{16.8cm}}}{\end{tabular}}
+\newenvironment{resume-twocol}{\begin{tabular}{p{3.8cm} l p{13.0cm}}}{\end{tabular}}
+
+% required to create same-looking columns
+\newcommand{\emptycol}{\hspace{2mm}}
+
+% the commands to add entries, don't use that
+\newcommand{\addtabentry}[2]{\textit{#1} & \emptycol & #2\\}
+\newcommand{\addtabentryb}[2]{\addtabentry{#1}{\textbf{#2}}}
+\newcommand{\addtabentrydesc}[4]{\addtabentrynodesc{#1}{#2}{#3} \addtabentry{}{#4}}
+\newcommand{\addtabentrynodesc}[3]{\textit{#1} & \emptycol & \textbf{#2}\par #3\\}
+\newcommand{\addtabentrydescol}[4]{\textit{#1} & \emptycol & \textbf{#2}, #3\\ \addtabentry{}{#4}}
+
+% the aliases for the entries, use that!
+\newcommand{\addedu}[4]{\addtabentrydesc{#1}{#2}{#3}{#4}}
+\newcommand{\addedushort}[3]{\addtabentrynodesc{#1}{#2}{#3}}
+\newcommand{\addexperience}[4]{\addtabentrydescol{#1}{#2}{#3}{#4}}
+\newcommand{\addproject}[4]{\addtabentrydescol{#1}{#2}{#3}{#4}}
+\newcommand{\addskill}[2]{\addtabentry{#1}{#2}}
+\newcommand{\addextra}[2]{\addtabentry{#1}{#2}}

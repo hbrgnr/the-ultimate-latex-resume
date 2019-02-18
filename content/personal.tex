@@ -1,0 +1,21 @@
+% !TeX root = ../resume.tex
+
+\iftoggle{picture}{
+	\begin{wrapfigure}{R}{\imagewidth}
+		\vspace{-7mm}
+		\includegraphics[width=\imagewidth]{res/picture.jpg}
+	\end{wrapfigure}
+}{}
+
+\maketitle % Print the name as title
+
+% required since addr has only 2 lines
+\vspace{4mm}
+
+\begin{resume-twocol}
+	\addtabentry{\address}{\the\addr}
+	\addtabentry{\city}{\the\addrcity}
+	\addtabentry{\iemail}{\href{mailto:\the\email}{\the\email}}
+	\addtabentry{\itel}{\href{tel:\the\telephone}{\the\telephone}}
+	\addtabentry{\bdayplace}{\the\birthday, \the\birthplace}
+\end{resume-twocol}
